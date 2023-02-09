@@ -14,4 +14,12 @@ public class DinoData {
     public static ArrayList<Dinosaur> getAllDinos() {
         return allDinos;
     }
+
+    // let's create a method now for adding Dinosaur objects into
+    // the allDinos ArrayList
+    // Inputs: Dinosaur object
+    // Outputs:
+    public static void addDino(Dinosaur newDinoObj) {
+        allDinos.add(newDinoObj);
+    }
 }

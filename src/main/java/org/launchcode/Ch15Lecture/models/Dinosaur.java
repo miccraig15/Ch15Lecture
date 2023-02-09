@@ -1,20 +1,30 @@
 package org.launchcode.Ch15Lecture.models;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Dinosaur {
 
     private int id;
     private static int nextId = 1;
 
+    @NotBlank
+    @Size(min=3)
     private String species;
+
+    @NotNull
     private String diet;
-    private boolean aquatic;
+
+    @NotNull
+    private String aquatic;
 
     public Dinosaur() {
         id = nextId;
         nextId++;
     }
 
-    public Dinosaur(String species, String diet, boolean aquatic) {
+    public Dinosaur(String species, String diet, String aquatic) {
         this();
         this.species = species;
         this.diet = diet;
@@ -37,11 +47,11 @@ public class Dinosaur {
         this.diet = diet;
     }
 
-    public boolean isAquatic() {
+    public String isAquatic() {
         return aquatic;
     }
 
-    public void setAquatic(boolean aquatic) {
+    public void setAquatic(String aquatic) {
         this.aquatic = aquatic;
     }
 

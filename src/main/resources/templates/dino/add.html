@@ -5,6 +5,30 @@
     <title></title>
 </head>
 <body>
+    <h1>Add Dinosaur</h1>
+<!--species, diet, aquatic-->
+    <form method="POST">
+        Species:
+        <input type="text" name="species" />
+<!--    We only want to render this p tag IF AND ONLY IF there is an actual
+        error message to display -->
+        <span th:text="${errorMsg}" th:if="${errorMsg != null}" style="color:red;"></span>
+        <br>
+        Diet:
+        <select name="diet">
+            <option value="Herbivore">Herbivore</option>
+            <option value="Carnivore">Carnivore</option>
+            <option value="Omnivore">Omnivore</option>
+        </select>
+        <br>
+        Is the dino aquatic?
+        <select name="aquatic">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+        <br>
+        <button>Add Dino! 🐱‍🐉</button>
+    </form>
 
 </body>
 </html>
