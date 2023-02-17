@@ -28,7 +28,9 @@ public class DinoController {
     }
 
     @GetMapping("add")
-    public String displayAddDinoForm() {
+    public String displayAddDinoForm(Model model) {
+//        now that we are using th:field to bind form inputs to fields we need to pass in an EMPTY dino object
+        model.addAttribute("dinosaur", new Dinosaur());
         return "dino/add";
     }
 
@@ -52,19 +54,12 @@ public class DinoController {
             return "dino/add";
         }
 
-
         // What should we do with this Dinosaur object?
         // Let's add it to the allDinos list!
         DinoData.addDino(newDinoObj);
 
-        // Now that we have processed our post request and
-        // stored our Dinosaur object in our allDinos list,
-        // what page should we render?
-        // Anytime we render dino/index, we need to pass in the allDinos list
-        // so that our Thymeleaf can render all of dinos in the table
-        model.addAttribute("allDinos", DinoData.getAllDinos());
+        return "redirect";
 
-        return "dino/index";
     }
 
 }
