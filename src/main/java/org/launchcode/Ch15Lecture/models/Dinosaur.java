@@ -11,12 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Dinosaur {
-
-    @Id
-    @GeneratedValue
-
-    private int id;
+public class Dinosaur extends AbstractEntity {
 
     @NotBlank
     @Size(min=3)
@@ -63,8 +58,5 @@ public class Dinosaur {
         this.aquatic = aquatic;
     }
 
-    public int getId() {
-        return id;
-    }
 
 }

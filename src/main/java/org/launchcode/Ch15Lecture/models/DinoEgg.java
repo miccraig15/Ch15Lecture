@@ -3,10 +3,7 @@ package org.launchcode.Ch15Lecture.models;
 import javax.persistence.*;
 
 @Entity
-public class DinoEgg {
-    @Id
-    @GeneratedValue
-    private int id;
+public class DinoEgg extends AbstractEntity {
     private int sizeInches;
     private int weightKg;
     private String dateLaid;
@@ -20,10 +17,6 @@ public class DinoEgg {
         this.sizeInches = sizeInches;
         this.weightKg = weightKg;
         this.dateLaid = dateLaid;
-    }
-
-        public int getId() {
-        return id;
     }
 
     public int getSizeInches() {
