@@ -49,4 +49,12 @@ public class DinoEgg {
     public void setDateLaid(String dateLaid) {
         this.dateLaid = dateLaid;
     }
+
+    public Dinosaur getDinosaur() {
+        return dinosaur;
+    }
+
+    public void setDinosaur(Dinosaur dinosaur) {
+        this.dinosaur = dinosaur;
+    }
 }

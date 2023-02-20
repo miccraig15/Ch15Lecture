@@ -52,7 +52,7 @@ public class DinoController {
         // check that the data is passing using this Errors object before adding the dino to the
         // allDinos list
         if(errors.hasErrors()) {
-            // If errors.hasErros is true, let's re-render the dino/add instead of
+            // If errors.hasErrors is true, let's re-render the dino/add instead of
             // continuing on and adding the dino into the allDinos list and rendering the
             // dino/index page
             // Before we re-render out the dino/add view, let's pass in an error message to the view
