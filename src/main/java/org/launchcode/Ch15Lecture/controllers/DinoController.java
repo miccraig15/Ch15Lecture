@@ -63,9 +63,9 @@ public class DinoController {
 
         // What should we do with this Dinosaur object?
         // Let's add it to the allDinos list!
-        DinoData.addDino(newDinoObj);
+        dinosaurRepository.save(newDinoObj);
 
-        return "redirect";
+        return "redirect:";
 
     }
 
